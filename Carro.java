@@ -22,6 +22,14 @@ public class Ex1 {
 		c2.modelo = teclado.nextLine();
 		System.out.println("Digite aqui o ano de fabricação do segundo carro: ");
 		c2.anoFabricacao = teclado.nextLine();
+
+		System.out.println("Marca do primeiro carro: "+c1.marca);
+		System.out.println("Modelo do primeiro carro: "+c1.modelo);
+		System.out.println("Ano de fabricação do primeiro carro: "+c1.anoFabricacao);
+		
+		System.out.println("Marca do segundo carro: "+c2.marca);
+		System.out.println("Modelo do segundo carro: "+c2.modelo);
+		System.out.println("Ano de fabricação do segundo carro: "+c2.anoFabricacao);
 		
 		teclado.close();
 		
