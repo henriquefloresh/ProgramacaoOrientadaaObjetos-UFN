@@ -1,5 +1,5 @@
 package pkg;
-
+//ex1
 import java.util.Scanner;
 
 public class Disc {
