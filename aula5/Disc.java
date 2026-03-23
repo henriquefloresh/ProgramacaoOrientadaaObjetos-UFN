@@ -6,7 +6,7 @@ public class Disc {
 	public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Disciplina d = new Disciplina();
+        ClasseDisciplina d = new ClasseDisciplina();
 
         // a) Conteúdo original
         System.out.println(" Conteúdo ORIGINAL ");
