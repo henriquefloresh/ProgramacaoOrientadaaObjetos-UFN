@@ -58,16 +58,21 @@ public class Produto {
                 System.out.println("Produto indisponível");
             }
 
-        System.out.println("Quantas unidades saíram hoje? ");
+        System.out.print("\nQuantas unidades entraram no estoque? ");
+        int entrada = teclado.nextInt();
+        produto.adicionarEstoque(entrada);
+        System.out.println("Novo saldo: " + produto.quantidade);
+
+
+        System.out.print("\nQuantas unidades deseja vender? ");
         int qtde = teclado.nextInt();
-        produto.adicionarEstoque(qtde);
 
         if(produto.vender(qtde)){
             System.out.println("---  Recibo: Venda de " + qtde + " unidades confirmada! ---");
         } else{
             System.out.println("---  Alerta: Não foi possível realizar a venda! ---");
         }
-        teclado.close();
 
+        teclado.close();
     }
 }
