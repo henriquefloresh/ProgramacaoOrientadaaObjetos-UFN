@@ -67,6 +67,7 @@ public class Produto {
         } else{
             System.out.println("---  Alerta: Não foi possível realizar a venda! ---");
         }
+        teclado.close();
 
     }
 }
