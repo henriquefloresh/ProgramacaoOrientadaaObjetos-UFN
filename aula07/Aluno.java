@@ -13,6 +13,11 @@ public class Aluno {
         nota1 = n1;
         nota2 = n2;
         nota3 = n3;
+
+         System.out.println("Aluno " + nome);
+        System.out.println("Nota 1: " + nota1);
+        System.out.println("Nota 2: " + nota2);
+        System.out.println("Nota 3: " + nota3);
     }
 
     public boolean calcularMedia() {
