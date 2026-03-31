@@ -46,5 +46,6 @@ public class Retangulo {
         }else {
             System.out.println("Não é Quadrado");
         }
+        teclado.close();
     }
 }
