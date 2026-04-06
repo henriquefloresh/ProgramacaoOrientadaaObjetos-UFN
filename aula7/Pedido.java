@@ -2,10 +2,10 @@ package pkgas;
 
 import java.util.Scanner;
 public class Pedido {
-    private int numero;
-    private String produto;
-    private double preco;
-    private int quantidade;
+    public int numero;
+    public String produto;
+    public double preco;
+    public int quantidade;
 
     
     public Pedido(int numero, String produto, double preco, int quantidade) {
