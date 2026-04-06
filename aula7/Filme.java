@@ -3,9 +3,9 @@ package pkgas;
 import java.util.Scanner;
 
 public class Filme {
-    private String titulo;
-    private int duracao; 
-    private int classificacaoEtaria;
+    public String titulo;
+    public int duracao; 
+    public int classificacaoEtaria;
 
     
     public Filme(String titulo, int duracao, int classificacaoEtaria) {
