@@ -1,0 +1,18 @@
+4) Qual a diferença entre os tipos de dados String, int e boolean? Dê um exemplo de uso de cada um.
+    String: usado para armazenar texto(caracteres).
+      - String nome = "Henrique";
+    int: usado para armazenar números inteiros.
+      - int idade = 19;
+    boolean: usado para armazenar valores lógicos(verdadeiro ou falso).
+      - boolean MaiordeIdade = true;
+      if(MaiordeIdade) {
+        System.out.println("Maior de idade!");
+      }
+
+5) Explique o que é e para que serve o método toString() em uma classe.
+  O toString() é um método que vem da classe base java.lang.Object, ou seja, todas as classes em Java herdam esse método.
+  Ele serve para transformar objeto em texto e para facilitar logs e testes.
+
+6) Descreva o que acontece quando se tenta acessar um atributo privado diretamente fora da classe. Como é possível acessá-lo de forma correta?
+  Ocorre um erro porque se o atributo é privado, só se pode acessar dentro da mesma classe.
+  Para acessá-lo de forma correta, deve-se usar métodos públicos(getters e setters) para acessar e modificar o valor.
