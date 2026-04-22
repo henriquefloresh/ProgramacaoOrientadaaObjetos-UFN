@@ -1,0 +1,44 @@
+1) Explique os seguintes conceitos de POO em Java:
+
+a) Classe = Uma classe é define como o objeto será, como um "molde". Além disso, especifica quais atributos(dados) e métodos(ações) os objetos daquele tipo terão.
+
+b) Objeto = Um objeto é uma instância de uma classe como se fosse um "exemplar" criado a partir da classe. 
+              - Ele possui valores reais para os atributos e pode usar métodos definidos.
+
+c) Atributo = Um atributo é uma variável dentro da classe que representa as características do objeto.
+
+d) Método = Um método é uma função dentro da classe que define comportamentos ou ações que o objeto deve realizar.
+
+e) Encapsulamento = O encapsulamento é o princípio de proteger os dados de um objeto, controlando o acesso a eles.
+                      - Normalmente, isso é feito deixando os atributos como PRIVATE e acessando-os por métodos públicos(getters e setters).
+
+2) Qual a diferença entre método e construtor em uma classe? Dê um exemplo.
+    Método é uma função da classe usada para realizar ações(comportamentos).
+    Construtor é um tipo especial de método usado para criar e inicializar objetos.
+    Exemplo: 
+class Pessoa {
+    String nome;
+    int idade;
+
+    // Construtor
+    Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    // Método
+    void apresentar() {
+        System.out.println("Olá, meu nome é " + nome);
+    }
+}
+
+3) O que são modificadores de acesso em Java? Cite e explique brevemente os principais.
+  São palavras-chaves que definem quem pode acessar classes, atributos e métodos. Eles ajudam a controlar a visibilidade e a reforçar o encapsulamento.
+  
+  Principais modificadores de acesso em java:
+  - public: Pode ser acessado de qualquer classe, pacote ou objeto.
+  - private: Só pode ser acessado dentro da própria classe, muito usado para encapsulamento.
+  - protected: Pode ser acessado dentro da mesma classe, no mesmo pacote e por subclasses(mesmo em pacotes diferentes).
+  - default: Quando nenhum modificador é declarado, acesso permitido somente dentro do mesmo pacote.
+  Você usa esses modificadores para controlar o acesso e evitar uso indevido dos dados e métodos, deixando o código mais seguro e organizado.
+  
