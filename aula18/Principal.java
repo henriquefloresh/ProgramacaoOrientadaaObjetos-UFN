@@ -58,6 +58,7 @@ public class Principal {
 
                     lista.add(novo);
 
+                    // Atualiza o arquivo com a nova lista
                     VeiculoLista.salvar(lista);
 
                     System.out.println("Veículo cadastrado.");
@@ -71,6 +72,7 @@ public class Principal {
 
                     boolean encontrado = false;
 
+                    // Procura o veículo na lista
                     for (Veiculo v : lista) {
 
                         if (v.getPlaca().equalsIgnoreCase(placa)) {
