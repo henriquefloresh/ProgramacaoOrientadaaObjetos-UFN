@@ -6,23 +6,23 @@ public class Cliente {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
 
         try {
             System.out.print("Placa: ");
-            String placa = sc.nextLine();
+            String placa = teclado.nextLine();
 
             System.out.print("Modelo: ");
-            String modelo = sc.nextLine();
+            String modelo = teclado.nextLine();
 
             System.out.print("Marca: ");
-            String marca = sc.nextLine();
+            String marca = teclado.nextLine();
 
             System.out.print("Ano de fabricação: ");
-            int ano = sc.nextInt();
+            int ano = teclado.nextInt();
 
             System.out.print("Quilometragem: ");
-            double km = sc.nextDouble();
+            double km = teclado.nextDouble();
 
             Veiculo veiculo = new Veiculo(placa, modelo, marca, ano, km);
 
@@ -40,7 +40,7 @@ public class Cliente {
             saida.close();
             entrada.close();
             socket.close();
-            sc.close();
+            teclado.close();
 
         } catch (Exception e) {
             System.out.println("Erro no cliente: " + e.getMessage());
