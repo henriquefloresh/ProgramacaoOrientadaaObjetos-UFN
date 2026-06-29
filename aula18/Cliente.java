@@ -26,13 +26,17 @@ public class Cliente {
 
             Veiculo veiculo = new Veiculo(placa, modelo, marca, ano, km);
 
+            //Conecta ao servidor na porta 12345
             Socket socket = new Socket("localhost", 12345);
 
+            //Cria os canais para enviar e receber objetos
             ObjectOutputStream saida = new ObjectOutputStream(socket.getOutputStream());
             ObjectInputStream entrada = new ObjectInputStream(socket.getInputStream());
 
+            // Envia o objeto Veiculo para o servidor
             saida.writeObject(veiculo);
 
+            //Recebe a resposta do servidor
             String resposta = (String) entrada.readObject();
 
             System.out.println("Resposta do servidor: " + resposta);
