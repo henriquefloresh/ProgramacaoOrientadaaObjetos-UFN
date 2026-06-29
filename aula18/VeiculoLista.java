@@ -1,49 +1,28 @@
 import java.io.*;
 import java.util.ArrayList;
 
-public class VeiculoLista {
+public class VeiculosLista {
 
-    private static final String ARQUIVO = "veiculos.dat";
+    private static final String NOME_ARQUIVO = "veiculos.dat";
 
-    public static void salvar(ArrayList<Veiculo> lista) {
-
+    public static void gravar(ArrayList<Veiculo> veiculos) {
         try {
-            ObjectOutputStream out = new ObjectOutputStream(
-                    new FileOutputStream(ARQUIVO));
-
-            out.writeObject(lista);
-            out.close();
-
-        } catch (IOException e) {
-            System.out.println("Erro ao salvar arquivo.");
+            ObjectOutputStream saida = new ObjectOutputStream(new FileOutputStream(NOME_ARQUIVO));
+            saida.writeObject(veiculos);
+            saida.close();
+        } catch (IOException erro) {
+            System.out.println("Erro ao gravar no arquivo.");
         }
-
     }
 
-    @SuppressWarnings("unchecked")
-    public static ArrayList<Veiculo> carregar() {
-
-        File arquivo = new File(ARQUIVO);
-
-        if (!arquivo.exists()) {
-            return new ArrayList<>();
-        }
-
+    public static ArrayList<Veiculo> ler() {
         try {
-
-            ObjectInputStream in = new ObjectInputStream(
-                    new FileInputStream(ARQUIVO));
-
-            ArrayList<Veiculo> lista = (ArrayList<Veiculo>) in.readObject();
-
-            in.close();
-
-            return lista;
-
-        } catch (Exception e) {
-            return new ArrayList<>();
+            ObjectInputStream entrada = new ObjectInputStream(new FileInputStream(NOME_ARQUIVO));
+            ArrayList<Veiculo> veiculos = (ArrayList<Veiculo>) entrada.readObject();
+            entrada.close();
+            return veiculos;
+        } catch (Exception erro) {
+            return new ArrayList<Veiculo>();
         }
-
     }
-
 }
